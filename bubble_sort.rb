@@ -19,6 +19,9 @@ def bubble_sort(arr)
 end
 
 def bubble_sort_by(arr)
+  unless block_given?
+    raise 'ERROR'
+  end
   index = 0
   switched = false
   while index < arr.length
@@ -36,6 +39,7 @@ def bubble_sort_by(arr)
     end
   end
   arr
-end
+end  
+
 
 bubble_sort_by(["hi","hello","hey"]){|left,right| left.length - right.length }
