@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 def test_results
   test_number = 0
   until test_number == 1000
