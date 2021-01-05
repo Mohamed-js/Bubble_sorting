@@ -1,23 +1,4 @@
-def test_results
-  test_number = 0
-  until test_number == 1000
-    array_length = Random.rand(20)
-    arr = []
-    until array_length.zero?
-      arr += [Random.rand(101)]
-      array_length -= 1
-    end
-    arr = sort_with_bubbles(arr)
-    unless arr == arr.sort
-      raise 'BADLY SORTED! ' + arr.to_s + ' should be ' + arr.sort.tos + ', loop ' + testnumber.to_s
-    end
-
-    puts arr.to_s
-    test_number += 1
-  end
-end
-
-def sort_with_bubbles(arr)
+def bubble_sort(arr)
   index = 0
   switched = false
   while index < arr.length
@@ -36,5 +17,3 @@ def sort_with_bubbles(arr)
   end
   arr
 end
-
-test_results
