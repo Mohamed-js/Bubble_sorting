@@ -19,7 +19,7 @@ def bubble_sort(arr)
 end
 
 def bubble_sort_by(arr)
-  return 'Error: Block in not given, give it a block' unless block_given?
+  raise 'Error: Expected a block!' unless block_given?
 
   index = 0
   switched = false
@@ -39,5 +39,6 @@ def bubble_sort_by(arr)
   end
   arr
 end
+
 
 bubble_sort_by(%w[hi hello hey]) { |left, right| left.length - right.length }
